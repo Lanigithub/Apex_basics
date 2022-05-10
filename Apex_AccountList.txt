@@ -1,0 +1,14 @@
+// This class is setting up an account List with SOQL, we can perform DML operations with the acocunt
+
+public class List_Account {
+    public void accountList(){
+        //Declare a list with type Account to create an account list
+        List<Account> accList=new List<Account>();
+        // the acclist is a SOQL
+        accList=[SELECT Id, Name FROM Account Limit 2];  // account with two rows, columns: ID and Name
+        System.debug('The accList: '+ accList);           // Execute on Debug window: List_Account a= new List_Account();
+                                                           //                         a.accountList();
+        
+    }
+
+}
