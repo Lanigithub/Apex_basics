@@ -9,3 +9,8 @@
 ####  *In this apex class you will learn about the following methods: 
 #### **get(index):
 #### ** getSObjectType(), indexOf( ), isEmpty(), remove(index), set(index,listElement) , size( ), sort( )
+
+### 3. Apex method 3: Create a List with type Account to perform DML operations
+
+
+
