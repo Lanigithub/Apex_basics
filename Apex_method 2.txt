@@ -1,0 +1,36 @@
+// In this class we will learn more list methods:
+// get(index), getSObjectType(), indexOf(element), isEmpty(), remove(index), size(), set(index, listElement),sort()
+public class Apex_List2 {
+    public void listMethod2(){                    //declare a method listMethod
+        List<String> nameList= new List<String>{'Annie','Vince','Brian'};    //Declare nameList with type String
+        List<Integer> ageList =new List<Integer>{35,18,15};  //Declear ageList with type Integer
+        //declare sObject and store acount or contact in sobj with SOQL:
+        sObject sobj= [SELECT Id, Name from Account Limit 1];
+        sObject sobj2= [SELECT Id, Name from Contact Limit 1];
+        
+        
+         
+        //Use get(index) method to access the element in the list
+        System.debug(nameList.get(1));   //   Output: Vince             Debug window for execution: Apex_list2 L2=new Apex_list2 ();
+                                                                                      //            L2.listMethod2();
+       // System.debug('Object type: '+sobj.getSObjectType());     // Method etSObjectType() Output: Account  
+        // System.debug('Object type: '+sobj2.getSObjectType()); //  Output: Contact  
+       // System.debug('Index of age 18: '+ageList.indexOf(18));  // method : ndexOf(18) output: 1
+       //System.debug(ageList.isEmpty());        // method isEmppty() Output: False
+       // System.debug(ageList.size());            //method .size()   output: 3
+        
+        //Sort() method needs to sort the list first and no need to store in a new list
+       // ageList.sort();
+        //System.debug(ageList);        // output: (15,18,35)
+        
+        // remove(index) to remove the element with this index
+        //System.debug(ageList.remove(1));  // output: 18
+         // System.debug(ageList);    // output: (15,35)   the element on idex 1 18 is removed
+        // set(index, listElement)  It sets the specified value for the element at the given index.
+        ageList.set(1,20);     // (35,20,15) output
+        System.debug(ageList);
+        
+        // add(index, listElement): It helps in inserting an element into the List at the specified index position.
+        ageList.add(1,30);
+        System.debug(ageList);   // output: (35,30,20,15)
+        
