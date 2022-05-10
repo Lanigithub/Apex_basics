@@ -3,6 +3,11 @@
 #### //  contains() method  and equal() method for a boolean statement : true or false when compare two lists or checking existance of an element
 #### //  clone() method to copy a list and clear() to delete all the elements of a list
 
+
+
+
+
+
 public class Apex_list_and_Method {                //declarr a class Apex_list_and_Method
     public void listMethod(){                    //declare a method listMethod
         List<String> nameList= new List<String>{'Annie','Vince','Brian'};    //Declare nameList with type String
