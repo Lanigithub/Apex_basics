@@ -5,4 +5,7 @@
 ####  *contains() method  and equal() method for a boolean statement : true or false when compare two lists or checking existance of an element
 ####  *clone() method to copy a list and clear() to delete all the elements of a list
 
-
+### 2. Apex method 2:
+####  *In this apex class you will learn about the following methods: 
+#### **get(index):
+#### ** getSObjectType(), indexOf( ), isEmpty(), remove(index), set(index,listElement) , size( ), sort( )
