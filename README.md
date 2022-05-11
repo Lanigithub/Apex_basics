@@ -1,6 +1,6 @@
 ## **Apex_basics**
 
-### (Please see the Trailhead Challenges here: https://github.com/Lanigithub/Apex_Trailhead_Challeges )
+### (Please see the Trailhead Challenges here: https://github.com/Lanigithub/Apex_Trailhead_Challenges )
 
 #### 0. **Data Types Overview**
 
