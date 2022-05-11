@@ -1,7 +1,7 @@
 ## **Apex_basics**
 
 #### 0. **Data Types Overview**
-```
+
 Apex supports various **data types**, including a data type specific to Salesforce—the **sObject data type**.
 Apex supports the following data types:
 
@@ -15,7 +15,7 @@ A **map from a primitive to a primitive, sObject, or collection**
 A typed list of values, also known as an **enum**
 **User-defined Apex classes**
 **System-supplied Apex classes**
-```
+
 
 
 ### 1. **Apex_method 1**
