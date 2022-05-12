@@ -1,0 +1,79 @@
+//This class Collection has three methods: List, Set and Map and some of their methods
+
+public class Collection {
+    
+    public void collectionList(){
+        
+        // Create an empty list of String
+        
+List<Integer> my_list = new List<Integer>();
+        my_list.add(15);
+        my_list.add(20);
+        my_list.add(15);
+        Integer i = my_List.get(0);                   // Retrieves the element at index 0  output: 15
+          my_List.set(0, 1);                           // Adds the integer 1 to the list at index 0  
+        System.debug(i);
+        System.debug('The list is: '+my_List);               //output: (1,20,15)
+        
+         // Create a nested list
+
+//List<List<Set<Integer>>> my_list_2 = new List<List<Set<Integer>>>();
+        
+    }
+    
+      public void collectionSet(){
+          
+        // Adds an element to the set
+// Define set 
+Set<string> StateSet = new Set<string>{'CA', 'Ohio', 'Oregon'};
+StateSet.add('Texas');
+StateSet.add('CA');    //repeat the state CA
+          
+          System.debug('Set with New Value '+StateSet);    //output: {'CA', 'Ohio', 'Oregon','Texas'}--no duplicate in set
+
+// Removes an element from set
+StateSet.remove('Ohio');
+System.debug('Set with removed value '+StateSet);             // output: {'CA', 'Oregon','Texas'}
+
+// Check whether set contains the particular element or not and returns true or false
+Boolean boo;
+boo=StateSet.contains('Ohio');
+System.debug('Ohio in StateSet =>'+boo);    //Output:  false
+        
+        
+    }
+    
+      public void collectionMap(){
+ // Define a new map
+Map<string, integer> StudentNameToAge = new Map<string, integer>();
+
+// Insert a new key-value pair in the map where 'Leo' is key and 12 is value
+StudentNameToAge.put('Leo', 12);
+
+// Insert a new key-value pair in the map where 'Jenny' is key and 12 is value
+StudentNameToAge.put('Jenny', 11);
+
+// Assert that the map contains a specified key and respective value
+System.assert(StudentNameToAge.containsKey('Leo'));
+System.debug('If output is true then Map contains the key and output is:'
+   + StudentNameToAge.containsKey('Leo'));               // output: true
+
+// Retrieves a value, given a particular key
+Integer value = StudentNameToAge.get('Leo');
+System.debug('Value at the Specified key using get function: '+value);         // output: 12
+
+// Return a set that contains all of the keys in the map
+// Set<Integer> s = m.keySet();
+Set<String> SetOfKeys = StudentNameToAge.keySet();
+          System.debug('Value of Set with Keys '+SetOfKeys);                             // output:{'Jenny','Leo'}
+          
+        
+        
+        
+    }                                                 // On the Debug Execute Anonymous window:
+                                                      //Collection c= new Collection();
+                                                      //c.collectionList();
+                                                      //c.collectionSet();
+                                                      //c.collectionMap();
+
+}
