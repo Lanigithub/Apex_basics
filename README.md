@@ -36,7 +36,7 @@ or MyCustomObject__c** (you’ll learn more about sObjects in a later unit.)
 
 ### **3. Apex method 3: Create a List with type Account to perform DML operations**
 
-### ** 4. DML statement:
+### ** 4. DML statement:**
 (https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_dml_section.htm)
 
 #### insert: The insert DML operation adds one or more sObjects, such as individual accounts or contacts, to your organization’s data. insert is analogous to the INSERT statement in SQL... Syntax : insert sObject;  insert sObject[]
