@@ -19,6 +19,7 @@ or MyCustomObject__c** (you’ll learn more about sObjects in a later unit.)
 #### * **System-supplied Apex classes**
 
 ### 1. Collections:
+(https://www.tutorialspoint.com/apex/apex_collections.htm#:~:text=A%20list%20should%20be%20declared%20with%20the%20keyword%20'List'.&text=Below%20is%20the%20list%20which,Value%20Of%20ListOfCities'%2BListOfCities)%3B)
 #### **Lists:**
 #### A list is an ordered collection of elements that are distinguished by their indices. List elements can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
 #### **Sets:**
