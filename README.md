@@ -49,7 +49,7 @@ or MyCustomObject__c** (you’ll learn more about sObjects in a later unit.)
 
 ### **4. Apex method 3: Create a List with type Account to perform DML operations**
 
-### ** 5. DML statement:**
+### **5. DML statement:**
 (https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_dml_section.htm)
 
 #### insert: The insert DML operation adds one or more sObjects, such as individual accounts or contacts, to your organization’s data. insert is analogous to the INSERT statement in SQL... Syntax : insert sObject;  insert sObject[]
@@ -68,6 +68,18 @@ merge sObject ID
 merge sObject ID[]
 
 #### The first parameter represents the master record into which the other records are to be merged. The second parameter represents the one or two other records that should be merged and then deleted. You can pass these other records into the merge statement as a single sObject record or ID, or as a list of two sObject records or IDs.
+#### Manipulate Records with DML
+```
+#### Learning Objectives
+After completing this unit, you'll be able to:
+Use DML to insert, update, and delete records.
+Perform DML statements in bulk.
+Use upsert to either insert or update a record.
+Catch a DML Exception.
+Use a Database method to insert new records with the partial success option and process the results.
+Know when to use DML statements and when to use Database methods.
+Perform DML operations on related records.
+```
 
 
 
