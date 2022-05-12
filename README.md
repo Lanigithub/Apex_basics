@@ -25,7 +25,7 @@ or MyCustomObject__c** (you’ll learn more about sObjects in a later unit.)
 #### A set is an unordered collection of elements that do not contain any duplicates. Set elements can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
 #### **Maps:**
 #### A map is a collection of key-value pairs where each unique key maps to a single value. Keys and values can be any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
-P#### **arameterized Typing:**
+#### **arameterized Typing:**
 #### Apex, in general, is a statically-typed programming language, which means users must specify the data type for a variable before that variable can be used.
  
 
