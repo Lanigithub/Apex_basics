@@ -1,0 +1,42 @@
+// define the class( a templete in the memory) and give a name to the class: Cat. the object in Apex is the instance 
+//of the class Cat
+public class Cat {                          // Create a class with public as access modifier Dog as the object name 
+                                             //and file name Cat.apex 
+    public String name;                      // create properties of the object: access modifier, datatype, property 
+                                              // of the object
+    public Integer age;                        // same as above what the object has
+    public Void meow(){                          // the method of the object or functions(the set of instructions)
+            System.debug('Hello How are you?');
+        }                                     // what does the object do
+
+}  
+
+
+// Now you have created a class( the templet) in wich you have an object Cat and inside 
+//the templet( or blueprint or stucture)
+// you have name and age for the object Cat and the method for the object -what does the Cat do
+// But the memory only has he class templete. we need to create the objects( new Cat()) in the code 
+// console to call the objects ( with the reference variables or remote controls(Cat cat1=new Cat()))
+// After you write the constructor for a class, you must use the new keyword in order to instantiate 
+//an object from that class, using that constructor.  Constructor will be learned later
+
+*********************************************************************
+// Debug Execute Anonymous Window to instantiate the object and call the object
+//initiate the Objects(new Cat()) using new to call the objects
+//cat1 is the reference varaible or remote control
+Cat cat1= new Cat();
+cat1.name='Baby';    //retuning a name Baby 
+cat1.age=2;           //returning the age 2
+cat1.meow();             // retun nothing but execute the code inside 
+                        //this meow method
+System.debug('Name of cat1: '+cat1.name);
+System.debug('age of the cat1: '+cat1.age);
+
+// Create another reference variable cat2 to call the object:
+Cat cat2= new Cat();
+cat2.name='Summer';    //retuning a name Summer 
+cat2.age=10;           //returning the age 10
+cat2.meow();             // retun nothing but execute the code inside 
+                         //this meow method
+System.debug('Name of cat2: '+cat2.name);
+System.debug('age of the cat2: '+cat2.age);
