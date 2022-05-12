@@ -2,10 +2,11 @@
 //of the class Cat
 public class Cat {                          // Create a class with public as access modifier Cat as the object name 
                                              //and file name Cat.apex 
-    public String name;                      // create properties of the object: access modifier, datatype, property 
+    public String name;                      // create properties of the object(name,age, color etc) with access modifier(public), datatype(String), property(name) 
                                               // of the object
-    public Integer age;                        // same as above what the object has
-    public Void meow(){                          // the method of the object or functions(the set of instructions)
+    public Integer age;                        //  access modifier(public), datatype(Integer), property(age) 
+                                              // of the object
+    public Void meow(){                          // the method of the object or functions(the set of instructions): access modifier(public), data type(void-return                                                      //nothing) and name of the method meow( ) accepting no parameters
             System.debug('Hello How are you?');
         }                                     // what does the object do
 
