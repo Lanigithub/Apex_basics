@@ -18,25 +18,37 @@ or MyCustomObject__c** (you’ll learn more about sObjects in a later unit.)
 #### * **User-defined Apex classes**
 #### * **System-supplied Apex classes**
 
+### 1. Collections:
+#### **Lists:**
+#### A list is an ordered collection of elements that are distinguished by their indices. List elements can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
+#### **Sets:**
+#### A set is an unordered collection of elements that do not contain any duplicates. Set elements can be of any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
+#### **Maps:**
+#### A map is a collection of key-value pairs where each unique key maps to a single value. Keys and values can be any data type—primitive types, collections, sObjects, user-defined types, and built-in Apex types.
+P#### **arameterized Typing:**
+#### Apex, in general, is a statically-typed programming language, which means users must specify the data type for a variable before that variable can be used.
+ 
 
 
-### 1. **Apex_method 1**
+
+
+### 2. **Apex_method 1**
 
 ####  In this Apex class we will learn how to declare a list and apply the basic list methods: **add(), addAll()**to add elements to an existing list,
 ####  **contains()** method  and **equal()** method for a boolean statement : true or false when compare two lists or checking existance of an element
 ####  **clone()** method to copy a list and **clear()** to delete all the elements of a list
 
 
-### 2. **Apex method 2:**
+### 3. **Apex method 2:**
 
 ####  *In this apex class you will learn about the following methods: 
 #### **get(index):
 #### ** getSObjectType(), indexOf( ), isEmpty(), remove(index), set(index,listElement) , size( ), sort( )
 
 
-### **3. Apex method 3: Create a List with type Account to perform DML operations**
+### **4. Apex method 3: Create a List with type Account to perform DML operations**
 
-### ** 4. DML statement:**
+### ** 5. DML statement:**
 (https://developer.salesforce.com/docs/atlas.en-us.apexref.meta/apexref/apex_dml_section.htm)
 
 #### insert: The insert DML operation adds one or more sObjects, such as individual accounts or contacts, to your organization’s data. insert is analogous to the INSERT statement in SQL... Syntax : insert sObject;  insert sObject[]
