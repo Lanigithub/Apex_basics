@@ -1,6 +1,6 @@
 // define the class( a templete in the memory) and give a name to the class: Cat. the object in Apex is the instance 
 //of the class Cat
-public class Cat {                          // Create a class with public as access modifier Dog as the object name 
+public class Cat {                          // Create a class with public as access modifier Cat as the object name 
                                              //and file name Cat.apex 
     public String name;                      // create properties of the object: access modifier, datatype, property 
                                               // of the object
