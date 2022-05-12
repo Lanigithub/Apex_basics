@@ -1,0 +1,51 @@
+// This class Student has 2methods:setname,setAge with void( returning nothing)and 2 methods: getName(access modifier public and data type String and getAge with data type Integer
+// Declare a class names Student with the scope of public
+public class Student {
+
+    private String name;  // declare instance varaible for class Student
+    private Integer age;   // set the modifier to private because you don't want other people to randomly enter info and put restriction to methods
+   //private Double  grade;
+
+// first method: setName:
+
+    public void Name(String name) { // local varaible: name for setName method
+       this.name = name;
+       System.debug('Name of this student is: ' + this.name); 
+                                              //this.name is same as the instance varaible, entering name in local will be assigned to instance varaible
+    }                        //setting name method
+
+ //2nd method: setAge:   
+    public void age(Integer age) {   //local variable age for the setAge method(return a void)
+        if(age < 10) {
+            System.debug('Please enter appropriate age');
+            this.age = 10;
+        }
+        else {
+            this.age=age;
+        }
+    }
+
+// 3rd method getName, returning a string value:
+
+    public String getName() {           //getName() method
+        return name;                    // return a srtring to an instance variable name
+    }
+
+ 
+// 4th methods getAge returning an Interger Value:
+
+    public Integer getAge() {           //getAge() method to return a number to the instance variavle age
+        return age;
+
+    }
+                                    // Debug Execute Anonymous window:
+                                  // execute the student class with two methods:
+                                     //Student student=new Student();
+                                     //student.Name('July');
+                                     //System.debug('Name of this student is: '+student.getName());  returning July
+                                     //student.age(15);    if student.age(5) returning age=10 "please enter appropriate age
+                                   //System.debug('age of this student is: '+student.getAge());   returning 15
+
+
+
+}
