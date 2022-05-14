@@ -1,0 +1,180 @@
+// This is executed on the Debug Anonymous window to add two accounts and add contact to one of them
+// Apex DML Statements
+//Use Data Manipulation Language (DML) statements to insert, update, merge, delete, and restore data in Salesforce.
+
+//The following Apex DML statements are available:
+
+//****** Question 1 insert statement: 
+
+// define an account: Solar INC
+Account acct = new Account(
+    Name='Solar INC',
+    Phone='(925)250-2200',
+    NumberOfEmployees=60,
+    BillingCity='San Francisco');
+
+// insert acct with one DML operation: 
+
+insert acct;
+
+// Once the account is inserted, the sObject will be 
+// populated with an ID.
+// Get this ID.
+
+ID acctID = acct.ID;
+
+// Add a contact to this account with the same ID acctID
+
+Contact con = new Contact(
+    FirstName='AJ',
+    LastName='Lee',
+    Phone='(925)250-2200',
+    Department='Sales',
+    AccountId= acct.ID);
+
+// insert Contact with a DML operation
+
+insert con;
+
+// create  account with no contact
+
+Account acct2 = new Account(
+    Name='The Solar Store',
+    Phone='(510)999-1520',
+    NumberOfEmployees=60,
+    BillingCity='Los Angeles',
+    Description='Expert in Solar technologies.');
+
+// insert acct2 with one DML: 
+
+insert acct2;
+
+//***** Question 2.  update statement: 
+
+// Query with SOQL for the Account acct2: 
+
+
+Account myQuerryAcct= [ SELECT Name, Phone 
+                   FROM Account
+                   WHERE Name='The Solar Store'
+                    LIMIT 1];
+
+// update acct2 by changing the phone number  to Phone='(925)250-2200':
+
+myQuerryAct.Phone = (925)250-2200';
+
+// This call is to update the account's phone  with try{ blockcode with DML operation } 
+// catch(DmL exception:e){  System.debug('A DML exception has occurred: ' +e.getMessage()); } 
+
+try {
+    update myQuerryAct;
+
+} catch (DmlException e) {
+   
+ System.debug('A DML exception has occurred: ' +e.getMessage());
+
+}
+
+
+//****** Q3 more example on adding contact to an existing accout with the accoutID:
+
+// add a contact to the  accout 'Abore' with account ID= 001IY000002VSMxYAO
+Contact dave = new Contact(
+    FirstName='Dave',
+    LastName='Lee',
+    Phone=  '510-299-6000',
+    AccountId= '001IY000002VSMxYAO'
+        );
+// insert contact
+try {
+    insert dave;
+    System.debug('DML success');
+
+} catch (DmlException e) {
+   
+ System.debug('A DML exception has occurred: ' +e.getMessage());
+
+}
+
+
+
+// ****Question 4: delete statement:
+
+// Query for contact which was associated with an account:
+
+Contact queriedCon = [ SELECT Account.Name
+                       FROM Contact
+                       WHERE 
+                       Phone= '510-299=6000'];
+
+// delete the null account with wrong number:
+
+try {
+    delete queriedCon;
+
+    System.debug('DML success');
+
+} catch (DmlException e) {
+   
+ System.debug('A DML exception has occurred: ' +e.getMessage());
+
+}
+
+
+// *****Question 5. Delete the contact with null account:
+
+// Id= '003IY000001mh5nYAA'
+
+//Delete contact with  AccountId= '003IY000001mh5nYAA'
+
+Contact Con = [ SELECT Name
+                       FROM Contact
+                       WHERE 
+                       Id= '003IY000001mh5nYAA'];  // not AccoutId
+
+// delete the null account with wrong number:
+
+try {
+    delete Con;
+
+    System.debug('DML success');
+
+} catch (DmlException e) {
+   
+ System.debug('A DML exception has occurred: ' +e.getMessage());
+
+}
+
+//**** Question 6. unDelete contact with  AccountId= '003IY000001mh5nYAA'
+
+Contact Con = [ SELECT Name
+                       FROM Contact
+                       WHERE 
+                       Id= '003IY000001mh5nYAA'
+                       ALL ROWS];  
+
+// undelete the null account with wrong number:
+
+try {
+    undelete Con;
+
+    System.debug('DML success');
+
+} catch (DmlException e) {
+   
+ System.debug('A DML exception has occurred: ' +e.getMessage());
+
+}     // restores one or more existing sObject records, such as individual accounts or contacts, from your organization’s Recycle Bin.
+
+       //The ALL ROWS keyword queries all rows for both top level and aggregate relationships, including deleted records and archived activities.
+
+
+
+
+
+
+
+
+
+
+
