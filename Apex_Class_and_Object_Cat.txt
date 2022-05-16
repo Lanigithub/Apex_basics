@@ -6,7 +6,7 @@ public class Cat {                          // Create a class with public as acc
                                               // of the object
     public Integer age;                        //  access modifier(public), datatype(Integer), property(age) 
                                               // of the object
-    public Void meow(){                          // the method of the object or functions(the set of instructions): access modifier(public), data type(void-return                                                      //nothing) and name of the method meow( ) accepting no parameters
+    public Void meow(){                          // the method of the object or functions(the set of instructions): access modifier(public), data type(void-return                                              //nothing) and name of the method meow( ) accepting no parameters
             System.debug('Hello How are you?');
         }                                     // what does the object do
 
