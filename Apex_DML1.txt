@@ -1,10 +1,11 @@
-// This is executed on the Debug Anonymous window to add two accounts and add contact to one of them
+
 // Apex DML Statements
 //Use Data Manipulation Language (DML) statements to insert, update, merge, delete, and restore data in Salesforce.
 
 //The following Apex DML statements are available:
 
 //****** Question 1 insert statement: 
+// This is executed on the Debug Anonymous window to add two accounts and add contact to one of them
 
 // define an account: Solar INC
 Account acct = new Account(
