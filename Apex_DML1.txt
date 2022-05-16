@@ -5,7 +5,7 @@
 //The following Apex DML statements are available:
 
 //****** Question 1 insert statement: 
-// This is executed on the Debug Anonymous window to add two accounts and add contact to one of them
+// This is executed on the Debug Anonymous window to create two accounts and add contact to one account
 
 // define an account: Solar INC
 Account acct = new Account(
