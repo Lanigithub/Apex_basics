@@ -33,7 +33,7 @@ List<Contact> listToUpdate = new List<Contact>( );
 
 //iterate through the listToUpdate to perform DML:
   
- for (Contact con: contacts ) {                   // for any contact con in the list lisToUpdate
+ for (Contact con: contacts ) {                   // for any contact con in the list contacts
 
        if (con.Department== 'Finance') {            //if its Department is 'Finance'
 
