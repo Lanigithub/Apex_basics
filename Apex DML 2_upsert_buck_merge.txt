@@ -1,0 +1,63 @@
+// upsert statement is to insert and update records
+// Write this on the Anonymous window:
+// ***Q 1 
+Contact kim2 = new Contact( FirstName= 'Kim', 
+                            LastName=' Shain', 
+                            Email='kim.smith@example.com', 
+                            Phone = '510-222-2300', 
+                            Description= ' Contact by Phone" ) ;
+insert kim2;
+kim2.Description= ' Contact by Email'; 
+upsert kim2;
+
+
+// **** Q 2: Buck DML: you will do DML on the list of contacts instead of doing it one by one:
+// Create a list of new Contacts:
+
+List<Contact> contacts = new List<Contact> { 
+                new Contact(FirstName='Joe',LastName='Smith',Department='Finance'),
+                new Contact(FirstName='Kathy',LastName='Smith',Department='Technology'),
+                new Contact(FirstName='Caroline',LastName='Roth',Department='Finance'),
+                new Contact(FirstName= 'Jenny ', LastName= 'Jackson ', Department= 'Technolegy' ),
+                new Contact(FirstName= 'June ', LastName= 'Simpson ', Department= 'Finance' ),
+                new Contact(FirstName= 'Lary ', LastName= 'Lee ', Department= 'Education' ),
+                new Contact(FirstName= 'Jay ', LastName= 'Luis ', Department= 'Finance' ),
+                new Contact(FirstName= 'Ruth ', LastName= 'Chase ', Department= 'Education' )  }; 
+// Buck inser list contacts:
+upsert contacts;             //upsert could avoid adding duplicate fields
+
+
+// Create a list to hold the list of the new contacts to update:
+
+List<Contact> listToUpdate = new List<Contact>( );
+
+//iterate through the listToUpdate to perform DML:
+  
+ for (Contact con: contacts ) {                   // for any contact con in the list lisToUpdate
+
+       if (con.Department== 'Finance') {            //if its Department is 'Finance'
+
+       con.Title = 'Financial Analyst';            // Then this line of code excuted: make its title = 'Financial  Analyst'
+
+ // add updated contact Sobject to the list:
+ 
+ listToUpdate.add(con);                   //use list.add( item in the list) the dot notation to add it to the list
+              }
+
+}
+
+// Bulk all contacts with one DML call:
+upsert listToUpdate; 
+
+
+//***Q 2 merge two accounts: 
+
+List<Account> ls = new List<Account>{new Account(name='Acme Inc.'),new Account(name='Acme')};
+insert ls;
+Account masterAcct = [SELECT Id, Name FROM Account WHERE Name = 'Acme Inc.' LIMIT 1];
+Account mergeAcct = [SELECT Id, Name FROM Account WHERE Name = 'Acme' LIMIT 1];
+try {
+    merge masterAcct mergeAcct;
+} catch (DmlException e) {
+    // Process exception here
+}
